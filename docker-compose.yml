@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  chefonline:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - h2-database:/data/h2db
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+
+volumes:
+  h2-database:
+    driver: local

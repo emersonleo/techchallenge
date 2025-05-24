@@ -1,15 +1,15 @@
 spring:
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:file:./data/h2db/chefonline
-#    username: sa
-#    password:
+    url: jdbc:h2:file:/data/h2db/chefonline
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
   h2:
     console:
       enabled: true
       path: /h2-console
+      settings:
+        web-allow-others: true
   jpa:
     hibernate:
       ddl-auto: update
