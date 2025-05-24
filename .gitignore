@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Env Files ###
+### Em um ambiente real, precisaria ser DESCOMENTADO, mas como
+###  precisa ser rodado pelos professores, ficará comentado
+# **/.env
